@@ -1,0 +1,22 @@
+file_type: csv
+dataset_name: file
+file_name: global_food_prices
+table_name: global_food_prices_table
+inbound_delimiter: ","
+outbound_delimiter: "|"
+skip_leading_rows: 1
+columns:
+    - admid
+    - admname
+    - mktid
+    - mktname
+    - cmid
+    - cmname
+    - curname
+    - ptid
+    - ptname
+    - umid
+    - umname
+    - mpmonth
+    - mpyear
+    - mpprice

@@ -1,0 +1,18 @@
+columns:
+- Country_ID
+- Country
+- Country_ID
+- Country
+- City_ID
+- City_Name
+- Food_ID
+- Food_Name
+- Country_Code
+- Sector_ID
+- Sector_Name
+- Weight_ID
+- Weight_Name
+- Purchase_Month
+- Purchase_Year
+- Purchase_Price
+separator: '|'
