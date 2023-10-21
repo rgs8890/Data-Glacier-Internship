@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="C:\Users\rgs88\OneDrive\Documents\Data Glacier Internship\Week 4\Application\static\schoolgrade_styles.css">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		
+		<h2>School Pass/Fail Prediction</h2>
+		
+	</div>
+	</header>
+	<p style="color:black;font-size:20;text-align: center;"><b>Results for Comment</b></p>
+	<div class="results">
+	{% if prediction == 1%}
+	<h2 style="color:red;">Fail</h2>
+	{% elif prediction == 0%}
+	<h2 style="color:green;">Pass</h2>
+	{% endif %}
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset = "UTF-8">
+    <title>ML API</title>
+        <link rel="stylesheet" type = "text/css" href= "C:\Users\rgs88\OneDrive\Documents\Data Glacier Internship\Week 4\Application\static\schoolgrade_styles.css">
+</head>
+
+<body>
+    <header>Student Grade Prediction</header>
+    <div class="form">
+        <h1>Student Details Form</h1>
+        <form action="/predict" method="POST">
+            <label for="School Name">School Name:</label>
+            <select name="school" placeholder="School" required="required">
+                <option value="GP">Gabriel Pereira</option>
+                <option value="MS">Mousinha da Silva</option>
+            </select>
+            <label for="age">Age:</label>
+            <select name="age" placeholder="Age" required="required">
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+            </select>
+            <label for="sex">Gender:</label>
+            <select name="sex" placeholder="Gender" required="required">
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+            </select>
+            <label for="address">Urban of Rural Area?:</label>
+            <select name="address" placeholder="Type of Student Home Area" required="required">
+                <option value="U">Urban</option>
+                <option value="R">Rural</option>
+            </select>
+            <label for="famsize">Family Size:</label>
+            <select name="famsize" placeholder="Family Size" required="required">
+                <option value="LE3">Less than or Equal to 3</option>
+                <option value="GT3">Greater than 3</option>
+            </select>
+            <label for="Pstatus">Parental Status:</label>
+            <select name="Pstatus" placeholder="Parental Status" required="required">
+                <option value="A">Living Together</option>
+                <option value="T">Living Apart</option>
+            </select>
+            <label for="Medu">Mother's Education:</label>
+            <select name="Medu" placeholder="Mother's Education" required="required">
+                <option value="0">None</option>
+                <option value="1">Primary Education</option>
+                <option value="2">5th-9th Grade</option>
+                <option value="3">Secondary Education</option>
+                <option value="4">Higher Education</option>
+            </select>
+            <label for="Fedu">Father's Education:</label>
+            <select name="Fedu" placeholder="Father's Education" required="required">
+                <option value="0">None</option>
+                <option value="1">Primary Education</option>
+                <option value="2">5th-9th Grade</option>
+                <option value="3">Secondary Education</option>
+                <option value="4">Higher Education</option>
+            </select>
+            <label for="Mjob">Mother's Job:</label>
+            <select name="Mjob" placeholder="Mother's Job" required="required">
+                <option value="at_home">At Home</option>
+                <option value="health">Health</option>
+                <option value="services">Services</option>
+                <option value="other">Other</option>
+            </select>
+            <label for="Fjob">Father's Job:</label>
+            <select name="Fjob" placeholder="Father's Job" required="required">
+                <option value="at_home">At Home</option>
+                <option value="health">Health</option>
+                <option value="services">Services</option>
+                <option value="other">Other</option>
+#            </select>
+            <label for="reason">Reason choosing this School:</label>
+            <select name="reason" placeholder="Reason Choosing this School" required="required">
+                <option value="course">Course</option>
+                <option value="home">Close to Home</option>
+                <option value="other">Other</option>
+                <option value="reputation">School Reputation</option>
+#            </select>
+            <label for="guardian">Guardian:</label>
+            <select name="guardian" placeholder="Guardian" required="required">
+                <option value="mother">Mother</option>
+                <option value="father">Father</option>
+                <option value="other">Other</option>
+#            </select>
+            <label for="traveltime">Travel Time (in hours):</label>
+            <select name="traveltime" placeholder="Travel Time" required="required">
+                <option value="1">Less than 15 min</option>
+                <option value="2">15-20 min</option>
+                <option value="3">30 min - 1 hour</option>
+                <option value="4">More than 1 hour</option>
+            </select>
+            <label for="studytime">Weekly Study Time(in hours):</label>
+            <select name="studytime" placeholder="Weekly Study Time (hours)" required="required">
+                <option value="1">Less than 2 Hours</option>
+                <option value="2">2-5 Hours</option>
+                <option value="3">5-10 Hours</option>
+                <option value="4">Greater than 10 Hours</option>
+            </select>
+            <label for="failures">Number of Past Class Failures:</label>
+            <select name="failures" placeholder="Failures" required="required">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <label for="schoolsup">School Support?</label>
+            <select name="schoolsup" placeholder="School Support" required="required">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <label for="famsup">Family Support?</label>
+            <select name="famsup" placeholder="Family Support" required="required">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <label for="paid">Extra Paid Classes?</label>
+            <select name="paid" placeholder="Paid Courses(Math/ Portuguese)" required="required">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <label for="activities">Extra Curricular Activities?</label>
+            <select name="activities" placeholder="Yes/No" required="required">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <label for="nursery">Attended Nursery?</label>
+            <select name="nursery" placeholder="Yes/No" required="required">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <label for="higher">Higher Education?</label>
+            <select name="higher" placeholder="Yes/No" required="required">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <label for="internet">Internet Access at Home?</label>
+            <select name="internet" placeholder="Yes/No" required="required">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <label for="romantic">In a Romantic Relationship?</label>
+            <select name="romantic" placeholder="Yes/No" required="required">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <label for="famrel">Quality of Family Relationships:</label>
+            <select name="famrel" placeholder="Quality of Family Relationships 1(terrible) - 5(great)" required="required">
+                <option value="1">Terrible</option>
+                <option value="2">Bad</option>
+                <option value="3">Ok</option>
+                <option value="4">Good</option>
+                <option value="5">Great</option>
+            </select>
+            <label for="freetime">Freetime after School:</label>
+            <select name="freetime" placeholder="Freetime after School" required="required">
+                <option value="1">None</option>
+                <option value="2">Little</option>
+                <option value="3">Enough</option>
+                <option value="4">Good Amount</option>
+                <option value="5">Plenty</option>
+            </select>
+            <label for="goout">Friendships:</label>
+            <select name="goout" placeholder="Friendships" required="required">
+                <option value="1">No Friendships</option>
+                <option value="2">Poor Friendships</option>
+                <option value="3">Decent Friendships</option>
+                <option value="4">Good Friendships</option>
+                <option value="5">Great Friendships</option>
+            </select>
+            <label for="Dalc">WorkDay Alcohol Consumption:</label>
+            <select name="Dalc" placeholder="WorkDay Alcohol Consumption" required="required">
+                <option value="1">Terrible</option>
+                <option value="2">Bad</option>
+                <option value="3">Ok</option>
+                <option value="4">Good</option>
+                <option value="5">Great</option>
+            </select>
+            <label for="Walc">Weekend Alcohol Consumption:</label>
+            <select name="Walc" placeholder="Weekend Alcohol Assumption" required="required">
+                <option value="1">Terrible</option>
+                <option value="2">Bad</option>
+                <option value="3">Ok</option>
+                <option value="4">Good</option>
+                <option value="5">Great</option>
+            </select>
+            <label for="health">Current Health Status:</label>
+            <select name="health" id="health" required>                
+                <option value="1">Terrible</option>
+                <option value="2">Bad</option>
+                <option value="3">Ok</option>
+                <option value="4">Good</option>
+                <option value="5">Great</option>
+            </select>
+            <label for="absences">Number of Absences:</label>
+            <input type="number" name="absences" placeholder="Number of Absences" required="required" min="0" max="100" />
+            <label for="G1">Semester 1 Grade:</label>
+            <input type="number" name="G1" placeholder="Grade(0-20)" required="required" min="0" max="20" />
+            <label for="G2">Semester 2 Grade:</label>
+            <input type="number" name="G2" placeholder="Grade(0-20)" required="required" min="0" max="20" />
+            <script>
+                function validateForm() {
+                    var ageInput = document.forms["predictionForm"]["Age"].value;
+                    
+                    // Convert the age input to a number
+                    var age = parseInt(ageInput);
+        
+                    // Check if age is out of range (less than 15 or greater than 22)
+                    if (age < 15 || age > 22) {
+                        alert("Age must be between 15 and 22.");
+                        return false; // Prevent form submission
+                    }
+                }
+            </script>
+            <button type="submit">Predict</button>
+        </form>
+       <br>
+       <br>
+       {{ prediction_text }}
+     </div>
+
+    <script>
+        function redirectToResult() {
+            window.location.href = "result.html";
+            return false; // Prevent form submission
+        }
+    </script>
+</body>
+</html>   
