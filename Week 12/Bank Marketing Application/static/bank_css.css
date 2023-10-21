@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #203a92;
+    margin: 0;
+    padding: 0;
+}
+
+.login {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #6996bb;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Result Styles */
+.bankresult {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Result Header */
+.bankresult h1 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Prediction Paragraph */
+.bankresult p {
+    color: #555;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Prediction Result */
+.bankresult h2 {
+    color: #007BFF;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+/* Positive Prediction (Yes) */
+.bankresult h2:matches(:nth-of-type(1)) {
+    color: green;
+}
+
+/* Negative Prediction (No) */
+.bankresult h2:matches(:nth-of-type(2)) {
+    color: red;
+}
+
+/* Unknown Prediction */
+.bankresult h2:matches(:nth-of-type(3)) {
+    color: orange;
+}
+
+/* Thank you note */
+.bankresult p:last-of-type {
+    color: #666;
+    font-size: 16px;
+    margin-top: 25px;
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ML API Results</title>
+    <link rel="stylesheet" type="text/css" href="bank_css.css">
+</head>
+<body>
+    <div class="result">
+        <h1>Bank Term Deposit Prediction Result</h1>
+        <p>Will the user sign for a Bank Term Deposit?</p>
+        {% if prediction == 1 %}
+        <h2>Yes</h2>
+        {% elif prediction == 0 %}
+        <h2>No</h2>
+        {% else %}
+        <h2>Unknown</h2>
+        {% endif %}
+        <p>Thank you for using our service!</p>
+    </div>
+</body>
+</html>
